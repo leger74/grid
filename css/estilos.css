@@ -14,29 +14,34 @@
     padding: 20px;
     grid-template-areas: 
     "header header header"
-    "main main sidebar"
+    "sidebarl main sidebard"
     "footer footer footer";
 }
 
-header{
+.container header{
     background-color: red;
     grid-area: header;
     padding: 50px;
 
 }
 
-aside{
+.container .sidebar-left{
 
     background-color: aquamarine;
-    grid-area: sidebar;
+    grid-area: sidebarl;
 }
 
-main{
+.container .sidebar-right {
+    background-color: blue;
+    grid-area: sidebard;
+}
+
+.container main{
 background-color: yellow;
 grid-area: main;
 }
 
-footer{
+.container  footer{
     background-color: rgb(198, 167, 167);
     grid-area: footer;
 
@@ -48,17 +53,17 @@ footer{
 
 .container2{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr 2fr 2fr 1fr;
     grid-template-rows: auto 1fr auto;
     gap: 10px;
     padding: 20px;
     min-height: 100vh;
     grid-template-areas:
-    "header header header header"
-    "main main main main"
-    "footer footer footer footer"
-     ;
+        "header header header header"
+        "sidebar-left main main sidebar-right"
+        "footer footer footer footer";
 }
+
 
 
 
@@ -66,7 +71,18 @@ footer{
     background-color: rgb(100, 207, 24);
     grid-area: header;
     padding: 50px;
+}
 
+.container2 .sidebar-left {
+    background-color: #7fd6e7;
+    grid-area: sidebar-left;
+    padding: 20px;
+}
+
+.container2 .sidebar-right {
+    background-color: #e7b97f;
+    grid-area: sidebar-right;
+    padding: 20px;
 }
 
 main{
@@ -88,7 +104,7 @@ footer{
     gap: 10px;
     min-height: 100vh;
     grid-template-areas: "header header header header"
-    "sidebar main main main "
+    "sidelefth main main siderigth"
     "footer footer footer footer";
 
 }
@@ -98,6 +114,14 @@ footer{
     background-color: orange;
 }
 
-.container3 sidebar {
+.container3 .sidebar-left {
 
+    background-color: rgb(255, 0, 76);
+    grid-area: sidelefth;
+
+}
+
+.container3 .sidebar-right {
+    background-color: rgb(15, 57, 94);
+    grid-area: siderigth;
 }
